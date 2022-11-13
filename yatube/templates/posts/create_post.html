@@ -31,8 +31,8 @@
             {% endfor %}
           {% endif %}
           <form method="post" action=
-          {% if is_valid %}
-          "{% url 'posts:post_edit' %}"
+          {% if is_edit %}
+          "{% url 'posts:post_edit' post.id %}"
           {% else %}
           "{% url 'posts:post_create' %}"
           {% endif %}>
