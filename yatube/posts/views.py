@@ -53,7 +53,7 @@ def post_detail(request, post_id):
 
 @login_required
 def post_create(request):
-    form = PostForm(request.POST)
+    form = PostForm(request.POST or None)
     if not form.is_valid():
         return render(request, 'posts/create_post.html', {'form': form})
     post = form.save(commit=False)
@@ -69,7 +69,7 @@ def post_edit(request, post_id):
     author = post.author
     if user != author:
         return redirect('posts:post_detail', post_id)
-    form = PostForm(request.POST, instance=post)
+    form = PostForm(request.POST or None, instance=post)
     is_edit = True
     context = {
         'is_edit': is_edit,

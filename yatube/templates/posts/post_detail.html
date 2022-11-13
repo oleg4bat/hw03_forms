@@ -27,6 +27,11 @@
           <a href="{% url 'posts:profile' post.author %}">
             все посты пользователя
           </a>
+        </li>  
+        <li class="list-group-item">  
+          <a href="{% url 'posts:post_edit' post.id %}">
+            Изменить пост
+          </a>
         </li>
       </ul>
     </aside>
