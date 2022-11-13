@@ -42,11 +42,9 @@ def profile(request, username):
 def post_detail(request, post_id):
     post = Post.objects.get(id=post_id)
     count = Post.objects.filter(author=post.author).count()
-    title = post.text[:30]
     context = {
         'count': count,
         'post': post,
-        'title': title,
     }
     return render(request, 'posts/post_detail.html', context)
 

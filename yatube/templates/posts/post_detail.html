@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-Пост {{ title }}
+Пост {{ post }}
 {% endblock  %}
 {% block content %}
 <div class="row">
@@ -28,7 +28,7 @@
             все посты пользователя
           </a>
         </li>  
-        <li class="list-group-item">  
+        <li class="list-group-item">
           <a href="{% url 'posts:post_edit' post.id %}">
             Изменить пост
           </a>
