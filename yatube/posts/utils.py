@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-POSTS_IN_PAGE = 10
+from .consts import POSTS_IN_PAGE
 
 
 def paginator(request, post_list):

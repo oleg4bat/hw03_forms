@@ -1,0 +1,2 @@
+SLICE = 30
+POSTS_IN_PAGE = 10

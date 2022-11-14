@@ -2,7 +2,7 @@
   <article>
     <ul>
       <li>
-        Автор: {{ post.author.get_full_name }}
+        Автор: <span style="color:red">{{ post.author.username }}</span>
       </li>
       <li>
         Дата публикации: {{ post.pub_date|date:"d E Y" }}

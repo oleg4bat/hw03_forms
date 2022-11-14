@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.db import models
+from .consts import SLICE
 
 User = get_user_model()
 
@@ -24,7 +25,7 @@ class Post(models.Model):
         ordering = ['-pub_date']
 
     def __str__(self) -> str:
-        return self.text[:30]
+        return self.text[:SLICE]
 
 
 class Group(models.Model):
